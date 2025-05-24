@@ -1,0 +1,57 @@
+version: "3.1"
+
+rules:
+- rule: Приветствие
+  steps:
+  - intent: greet
+  - action: utter_greet
+
+- rule: Прощание
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Запрос времени
+  steps:
+  - intent: time
+  - action: action_get_time
+
+- rule: Запрос даты
+  steps:
+  - intent: date
+  - action: action_get_date
+
+- rule: Запрос погоды
+  steps:
+  - intent: weather
+  - action: action_get_weather
+
+- rule: Вычисления
+  steps:
+  - intent: calculate
+  - action: action_calculate
+
+- rule: Возможности бота
+  steps:
+  - intent: capabilities
+  - action: utter_capabilities
+
+- rule: Благодарность
+  steps:
+  - intent: thanks
+  - action: utter_thanks
+
+- rule: Анализ текста
+  steps:
+  - intent: analyze_text
+  - action: action_analyze_text 
+
+- rule: Обработка настроения
+  steps:
+  - intent: mood_great
+  - action: utter_sentiment_positive  
+
+- rule: Обработка плохого настроения
+  steps:
+  - intent: mood_unhappy
+  - action: utter_sentiment_negative 
